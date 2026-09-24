@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096506e67151b2345a311de57f96dadf, type: 3}
+  m_Name: MagicHourglass
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
+  upgradeID: MagicHourglass
+  title: Magic Hourglass
+  image: {fileID: 3824146322478515066, guid: 4aec8413da4d01044ba2e7933688956c, type: 3}
+  description: Increase time-slow duration
+  maxLevel: 2
+  baseCost: 125
+  costMultiplier: 1.5
+  baseValue: 1
+  valueIncrementPerLevel: 0.5

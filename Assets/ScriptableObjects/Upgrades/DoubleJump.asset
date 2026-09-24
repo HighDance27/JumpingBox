@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096506e67151b2345a311de57f96dadf, type: 3}
+  m_Name: DoubleJump
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeData
+  upgradeID: DoubleJump
+  title: Double Jump
+  image: {fileID: -2254540983983133255, guid: c4e4ab38b99f98045b45344d0b9bd6bd, type: 3}
+  description: Jump again in mid-air
+  maxLevel: 1
+  baseCost: 500
+  costMultiplier: 2
+  baseValue: 1
+  valueIncrementPerLevel: 0.2

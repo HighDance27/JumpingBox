@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893f259e9bb5e92438226f8ea3f45deb, type: 3}
+  m_Name: Biome_Meadow
+  m_EditorClassIdentifier: Assembly-CSharp::BiomeData
+  biomeName: Plains
+  scoreThreshold: 0
+  dayColor: {r: 0.53, g: 0.81, b: 0.98, a: 1}
+  sunsetColor: {r: 0.95, g: 0.51, b: 0.25, a: 1}
+  nightColor: {r: 0.05, g: 0.05, b: 0.12, a: 1}
+  dayLightColor: {r: 1, g: 0.95, b: 0.84, a: 1}
+  nightLightColor: {r: 0.18, g: 0.24, b: 0.35, a: 1}
+  ground: {fileID: 2100000, guid: d3933438a84a624489866a175c6a811a, type: 2}
+  biomeObstacles:
+  - {fileID: 11400000, guid: 400cc170832896c4c94154455f5fbfbd, type: 2}
+  - {fileID: 11400000, guid: fb8447c6ef864524a9535e152ee258b4, type: 2}
+  - {fileID: 11400000, guid: 2eb5eea62582277498977193ae3f120d, type: 2}
+  - {fileID: 11400000, guid: 49e02f38bb6459e4fb2c28049d28bd1b, type: 2}
+  - {fileID: 11400000, guid: 78ff7ac250dbb994fa17f10e6c4239fc, type: 2}
+  - {fileID: 11400000, guid: fedda667115714f4193aa1dd45199006, type: 2}

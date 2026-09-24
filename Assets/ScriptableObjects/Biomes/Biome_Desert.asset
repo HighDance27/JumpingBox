@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893f259e9bb5e92438226f8ea3f45deb, type: 3}
+  m_Name: Biome_Desert
+  m_EditorClassIdentifier: Assembly-CSharp::BiomeData
+  biomeName: Plains
+  scoreThreshold: 50
+  dayColor: {r: 1, g: 0.7359867, b: 0.19433957, a: 1}
+  sunsetColor: {r: 0.9001812, g: 1, b: 0.47358483, a: 1}
+  nightColor: {r: 0.03714491, g: 0.037144866, b: 0.4188679, a: 1}
+  dayLightColor: {r: 1, g: 0.7708698, b: 0.27735847, a: 1}
+  nightLightColor: {r: 0.18, g: 0.24, b: 0.35, a: 1}
+  ground: {fileID: 2100000, guid: 71802d3a8b91efc4b8833222b5c3c152, type: 2}
+  biomeObstacles:
+  - {fileID: 11400000, guid: f96c902163c5404499ecbafefe21d8a9, type: 2}
+  - {fileID: 11400000, guid: 053b6eeb30dae234db75acacf395efa8, type: 2}
+  - {fileID: 11400000, guid: 2eb5eea62582277498977193ae3f120d, type: 2}
+  - {fileID: 11400000, guid: bdcfbc592d0d1d6468083ee5cf1f2470, type: 2}
+  - {fileID: 11400000, guid: b51becf12dfe8744396bca246dc351a8, type: 2}
+  - {fileID: 11400000, guid: c5aa8794a17c97344a7969c24e60344a, type: 2}

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893f259e9bb5e92438226f8ea3f45deb, type: 3}
+  m_Name: Biome_Snow
+  m_EditorClassIdentifier: Assembly-CSharp::BiomeData
+  biomeName: Snow
+  scoreThreshold: 200
+  dayColor: {r: 0.93962264, g: 0.93962264, b: 0.93962264, a: 1}
+  sunsetColor: {r: 0.5320754, g: 0.5320754, b: 0.5320754, a: 1}
+  nightColor: {r: 0.18490559, g: 0.18490559, b: 0.18490559, a: 1}
+  dayLightColor: {r: 1, g: 0.95, b: 0.84, a: 1}
+  nightLightColor: {r: 0.18, g: 0.24, b: 0.35, a: 1}
+  ground: {fileID: 2100000, guid: 3794212c403150c49ad105804592e2ef, type: 2}
+  biomeObstacles:
+  - {fileID: 11400000, guid: 4b6f867cd7b92514d9f41c44b5e68df6, type: 2}
+  - {fileID: 11400000, guid: 38f75bc8b6383b9449480fb0bcd08824, type: 2}
+  - {fileID: 11400000, guid: eebc6a649b3482b41be2b6d3ce0254d9, type: 2}
+  - {fileID: 11400000, guid: 29a95aae49332cc428a7047dea18fdd6, type: 2}
+  - {fileID: 11400000, guid: 5460afd3dcfb7574d9cab076257d542d, type: 2}
