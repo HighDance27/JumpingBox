@@ -14,9 +14,19 @@ public class ShopItemUI : MonoBehaviour
     public TextMeshProUGUI costText;
     public Button buyButton;
 
+    [Header("Level Selection UI")]
+    public Button plusButton;
+    public Button minusButton;
+
     [Header("Audio Feedback")]
     public AudioClip purchaseSuccessSFX;
     public AudioClip purchaseFailedSFX;
+
+    private void Start()
+    {
+        if (plusButton != null) plusButton.onClick.AddListener(IncreaseActiveLevel);
+        if (minusButton != null) minusButton.onClick.AddListener(DecreaseActiveLevel);
+    }
 
     private void OnEnable()
     {
@@ -53,6 +63,31 @@ public class ShopItemUI : MonoBehaviour
         RefreshDisplay();
     }
 
+    public void IncreaseActiveLevel()
+    {
+        if (upgrade == null) return;
+        int activeLvl = upgrade.GetActiveLevel();
+        int maxLvl = upgrade.GetCurrentLevel();
+
+        if (activeLvl < maxLvl)
+        {
+            upgrade.SetActiveLevel(activeLvl + 1);
+            RefreshDisplay();
+        }
+    }
+
+    public void DecreaseActiveLevel()
+    {
+        if (upgrade == null) return;
+        int activeLvl = upgrade.GetActiveLevel();
+
+        if (activeLvl > 0)
+        {
+            upgrade.SetActiveLevel(activeLvl - 1);
+            RefreshDisplay();
+        }
+    }
+
     public void RefreshDisplay()
     {
         if (upgrade == null) return;
@@ -61,10 +96,15 @@ public class ShopItemUI : MonoBehaviour
         titleText.text = upgrade.title;
         descriptionText.text = upgrade.description;
 
-        int currentLvl = upgrade.GetCurrentLevel();
-        levelText.text = $"Lvl: {currentLvl} / {upgrade.maxLevel}";
+        int maxLvl = upgrade.GetCurrentLevel();
+        int activeLvl = upgrade.GetActiveLevel();
 
-        if (currentLvl >= upgrade.maxLevel)
+        levelText.text = $"Lvl: {activeLvl} (Max: {maxLvl}/{upgrade.maxLevel})";
+
+        if (plusButton != null) plusButton.interactable = (activeLvl < maxLvl);
+        if (minusButton != null) minusButton.interactable = (activeLvl > 0);
+
+        if (maxLvl >= upgrade.maxLevel)
         {
             costText.text = "MAX";
             buyButton.interactable = false;

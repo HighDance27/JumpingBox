@@ -24,6 +24,20 @@ public class UpgradeData : ScriptableObject
         return PlayerPrefs.GetInt($"Upgrade_{upgradeID}_Level", 0);
     }
 
+    public int GetActiveLevel()
+    {
+        return PlayerPrefs.GetInt($"Upgrade_{upgradeID}_ActiveLevel", GetCurrentLevel());
+    }
+
+    public void SetActiveLevel(int level)
+    {
+        int max = GetCurrentLevel();
+        level = Mathf.Clamp(level, 0, max);
+        PlayerPrefs.SetInt($"Upgrade_{upgradeID}_ActiveLevel", level);
+        PlayerPrefs.Save();
+    }
+
+
     public int GetCostForNextLevel()
     {
         int currentLevel = GetCurrentLevel();
@@ -33,7 +47,7 @@ public class UpgradeData : ScriptableObject
 
     public float GetCurrentValue()
     {
-        return baseValue + (GetCurrentLevel() * valueIncrementPerLevel);
+        return baseValue + (GetActiveLevel() * valueIncrementPerLevel);
     }
 
     public bool TryUpgrade()
@@ -43,6 +57,7 @@ public class UpgradeData : ScriptableObject
         {
             int nextLevel = GetCurrentLevel() + 1;
             PlayerPrefs.SetInt($"Upgrade_{upgradeID}_Level", nextLevel);
+            SetActiveLevel(nextLevel);
             PlayerPrefs.Save();
             OnUpgradePurchased?.Invoke(this);
             return true;

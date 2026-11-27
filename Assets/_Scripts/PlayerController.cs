@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            jumpsRemaining = 1 + (doubleJumpUpgrade != null ? doubleJumpUpgrade.GetCurrentLevel() : 0);
+            jumpsRemaining = 1 + (doubleJumpUpgrade != null ? doubleJumpUpgrade.GetActiveLevel() : 0);
             SetRunningParticles(true);
         }
     }
@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            int extraJumpsAllowed = doubleJumpUpgrade != null ? doubleJumpUpgrade.GetCurrentLevel() : 0;
+            int extraJumpsAllowed = doubleJumpUpgrade != null ? doubleJumpUpgrade.GetActiveLevel() : 0;
             if (jumpsRemaining > extraJumpsAllowed)
             {
                 jumpsRemaining = extraJumpsAllowed;
@@ -348,7 +348,7 @@ public class PlayerController : MonoBehaviour
         isShielded = false;
         isInvincible = false;
         isDead = false;
-        jumpsRemaining = 1 + (doubleJumpUpgrade != null ? doubleJumpUpgrade.GetCurrentLevel() : 0);
+        jumpsRemaining = 1 + (doubleJumpUpgrade != null ? doubleJumpUpgrade.GetActiveLevel() : 0);
         SetRunningParticles(true);
         this.enabled = true;
     }

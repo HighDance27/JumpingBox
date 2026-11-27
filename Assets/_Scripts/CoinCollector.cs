@@ -36,7 +36,7 @@ public class CoinCollector : MonoBehaviour
 
     public void UpdateCollectorRadius()
     {
-        int currentLevel = (radiusUpgrade != null) ? radiusUpgrade.GetCurrentLevel() : 0;
+        int currentLevel = (radiusUpgrade != null) ? radiusUpgrade.GetActiveLevel() : 0;
         float currentRadius = (radiusUpgrade != null) ? radiusUpgrade.GetCurrentValue() : 0.5f;
 
         if (triggerCollider == null) triggerCollider = GetComponent<SphereCollider>();
@@ -76,7 +76,7 @@ public class CoinCollector : MonoBehaviour
 
     public void SetVisualEnabled(bool isVisible)
     {
-        int currentLevel = radiusUpgrade.GetCurrentLevel();
+        int currentLevel = radiusUpgrade.GetActiveLevel();
         lineRenderer.enabled = isVisible && (currentLevel > 0);
     }
 
